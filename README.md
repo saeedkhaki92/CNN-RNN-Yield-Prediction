@@ -13,7 +13,6 @@ Please install the following packages in Python3:
 - numpy
 - tensorflow
 - matplotlib
-- Pandas
 
 
 ## Dimension of Input Data
