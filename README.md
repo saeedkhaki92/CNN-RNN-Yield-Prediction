@@ -26,7 +26,7 @@ Let nw, ns, np, and nss be the number of weather components, soil components mea
 - `number of soil components measured at the surface (nss)`: 4
 
 
-## The CNN-RNN hyperparameters
+## The CNN-RNN Hyperparameters
 
 We used the following hyperparameters to train the CNN-RNN model. The W-CNN and S-CNN models
 both have 4 convolutional layers. In the CNN models, downsampling was performed by average pooling with stride of 2. The output of W-CNN is followed by a fully-connected layer which has 60 neurons for corn yield prediction and 40 neurons for soybean
