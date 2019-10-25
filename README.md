@@ -18,4 +18,4 @@ Please install the following packages in Python3:
 
 ## Dimension of Input Data
 
-Let nw, ns, np, nss be the number of weather components, soil component meaured at different depth, and planting time component, soil component meaured at the surface.
+Let nw, ns, np, nss be the number of weather components, soil component meaured at different depth, planting time component, and soil component meaured at the surface.
