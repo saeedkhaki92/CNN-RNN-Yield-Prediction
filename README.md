@@ -13,6 +13,18 @@ This repository contains codes for the paper entitled <a href="https://arxiv.org
   journal={arXiv preprint arXiv:1911.09045},
   year={2019}
 }
+
+
+@article{khaki2019crop,
+  title={Crop yield prediction using deep neural networks},
+  author={Khaki, Saeed and Wang, Lizhi},
+  journal={Frontiers in plant science},
+  volume={10},
+  year={2019},
+  publisher={Frontiers Media SA}
+}
+
+
 ```
 
 
