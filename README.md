@@ -24,3 +24,8 @@ Let nw, ns, np, and nss be the number of weather components, soil components mea
 - `number of planting date components (np)`: 16 (corn), 14 (soybean)
 - `number of soil components measured at the surface (nss)`: 4
 
+
+## Data Availability Statement
+
+The data analyzed in this study was obtained from different public data sources.
+
