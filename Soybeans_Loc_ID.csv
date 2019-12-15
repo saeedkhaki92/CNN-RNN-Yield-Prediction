@@ -1,0 +1,1047 @@
+State,County,ID_loc
+illinois,adams,0
+illinois,alexander,1
+illinois,bond,2
+illinois,boone,3
+illinois,brown,4
+illinois,bureau,5
+illinois,calhoun,6
+illinois,carroll,7
+illinois,cass,8
+illinois,champaign,9
+illinois,christian,10
+illinois,clark,11
+illinois,clay,12
+illinois,clinton,13
+illinois,coles,14
+illinois,cook,15
+illinois,crawford,16
+illinois,cumberland,17
+illinois,de witt,18
+illinois,douglas,19
+illinois,du page,20
+illinois,edgar,21
+illinois,edwards,22
+illinois,effingham,23
+illinois,fayette,24
+illinois,ford,25
+illinois,franklin,26
+illinois,fulton,27
+illinois,gallatin,28
+illinois,greene,29
+illinois,grundy,30
+illinois,hamilton,31
+illinois,hancock,32
+illinois,hardin,33
+illinois,henderson,34
+illinois,henry,35
+illinois,iroquois,36
+illinois,jackson,37
+illinois,jasper,38
+illinois,jefferson,39
+illinois,jersey,40
+illinois,jo daviess,41
+illinois,johnson,42
+illinois,kane,43
+illinois,kankakee,44
+illinois,kendall,45
+illinois,knox,46
+illinois,la salle,47
+illinois,lake,48
+illinois,lawrence,49
+illinois,lee,50
+illinois,livingston,51
+illinois,logan,52
+illinois,macon,53
+illinois,macoupin,54
+illinois,madison,55
+illinois,marion,56
+illinois,marshall,57
+illinois,mason,58
+illinois,massac,59
+illinois,mcdonough,60
+illinois,mchenry,61
+illinois,mclean,62
+illinois,menard,63
+illinois,mercer,64
+illinois,monroe,65
+illinois,montgomery,66
+illinois,morgan,67
+illinois,moultrie,68
+illinois,ogle,69
+illinois,peoria,70
+illinois,perry,71
+illinois,piatt,72
+illinois,pike,73
+illinois,pope,74
+illinois,pulaski,75
+illinois,putnam,76
+illinois,randolph,77
+illinois,richland,78
+illinois,rock island,79
+illinois,saline,80
+illinois,sangamon,81
+illinois,schuyler,82
+illinois,scott,83
+illinois,shelby,84
+illinois,st clair,85
+illinois,stark,86
+illinois,stephenson,87
+illinois,tazewell,88
+illinois,union,89
+illinois,vermilion,90
+illinois,wabash,91
+illinois,warren,92
+illinois,washington,93
+illinois,wayne,94
+illinois,white,95
+illinois,whiteside,96
+illinois,will,97
+illinois,williamson,98
+illinois,winnebago,99
+illinois,woodford,100
+indiana,adams,101
+indiana,allen,102
+indiana,bartholomew,103
+indiana,benton,104
+indiana,blackford,105
+indiana,boone,106
+indiana,brown,107
+indiana,carroll,108
+indiana,cass,109
+indiana,clark,110
+indiana,clay,111
+indiana,clinton,112
+indiana,crawford,113
+indiana,daviess,114
+indiana,de kalb,115
+indiana,dearborn,116
+indiana,decatur,117
+indiana,delaware,118
+indiana,dubois,119
+indiana,elkhart,120
+indiana,fayette,121
+indiana,floyd,122
+indiana,fountain,123
+indiana,franklin,124
+indiana,fulton,125
+indiana,gibson,126
+indiana,grant,127
+indiana,greene,128
+indiana,hamilton,129
+indiana,hancock,130
+indiana,harrison,131
+indiana,hendricks,132
+indiana,henry,133
+indiana,howard,134
+indiana,huntington,135
+indiana,jackson,136
+indiana,jasper,137
+indiana,jay,138
+indiana,jefferson,139
+indiana,jennings,140
+indiana,johnson,141
+indiana,knox,142
+indiana,kosciusko,143
+indiana,la porte,144
+indiana,lagrange,145
+indiana,lake,146
+indiana,lawrence,147
+indiana,madison,148
+indiana,marion,149
+indiana,marshall,150
+indiana,martin,151
+indiana,miami,152
+indiana,monroe,153
+indiana,montgomery,154
+indiana,morgan,155
+indiana,newton,156
+indiana,noble,157
+indiana,ohio,158
+indiana,orange,159
+indiana,owen,160
+indiana,parke,161
+indiana,perry,162
+indiana,pike,163
+indiana,porter,164
+indiana,posey,165
+indiana,pulaski,166
+indiana,putnam,167
+indiana,randolph,168
+indiana,ripley,169
+indiana,rush,170
+indiana,scott,171
+indiana,shelby,172
+indiana,spencer,173
+indiana,st. joseph,174
+indiana,starke,175
+indiana,steuben,176
+indiana,sullivan,177
+indiana,switzerland,178
+indiana,tippecanoe,179
+indiana,tipton,180
+indiana,union,181
+indiana,vanderburgh,182
+indiana,vermillion,183
+indiana,vigo,184
+indiana,wabash,185
+indiana,warren,186
+indiana,warrick,187
+indiana,washington,188
+indiana,wayne,189
+indiana,wells,190
+indiana,white,191
+indiana,whitley,192
+iowa,adair,193
+iowa,adams,194
+iowa,allamakee,195
+iowa,appanoose,196
+iowa,audubon,197
+iowa,benton,198
+iowa,black hawk,199
+iowa,boone,200
+iowa,bremer,201
+iowa,buchanan,202
+iowa,buena vista,203
+iowa,butler,204
+iowa,calhoun,205
+iowa,carroll,206
+iowa,cass,207
+iowa,cedar,208
+iowa,cerro gordo,209
+iowa,cherokee,210
+iowa,chickasaw,211
+iowa,clarke,212
+iowa,clay,213
+iowa,clayton,214
+iowa,clinton,215
+iowa,crawford,216
+iowa,dallas,217
+iowa,davis,218
+iowa,decatur,219
+iowa,delaware,220
+iowa,des moines,221
+iowa,dickinson,222
+iowa,dubuque,223
+iowa,emmet,224
+iowa,fayette,225
+iowa,floyd,226
+iowa,franklin,227
+iowa,fremont,228
+iowa,greene,229
+iowa,grundy,230
+iowa,guthrie,231
+iowa,hamilton,232
+iowa,hancock,233
+iowa,hardin,234
+iowa,harrison,235
+iowa,henry,236
+iowa,howard,237
+iowa,humboldt,238
+iowa,ida,239
+iowa,iowa,240
+iowa,jackson,241
+iowa,jasper,242
+iowa,jefferson,243
+iowa,johnson,244
+iowa,jones,245
+iowa,keokuk,246
+iowa,kossuth,247
+iowa,lee,248
+iowa,linn,249
+iowa,louisa,250
+iowa,lucas,251
+iowa,lyon,252
+iowa,madison,253
+iowa,mahaska,254
+iowa,marion,255
+iowa,marshall,256
+iowa,mills,257
+iowa,mitchell,258
+iowa,monona,259
+iowa,monroe,260
+iowa,montgomery,261
+iowa,muscatine,262
+iowa,o brien,263
+iowa,osceola,264
+iowa,page,265
+iowa,palo alto,266
+iowa,plymouth,267
+iowa,pocahontas,268
+iowa,polk,269
+iowa,pottawattamie,270
+iowa,poweshiek,271
+iowa,ringgold,272
+iowa,sac,273
+iowa,scott,274
+iowa,shelby,275
+iowa,sioux,276
+iowa,story,277
+iowa,tama,278
+iowa,taylor,279
+iowa,union,280
+iowa,van buren,281
+iowa,wapello,282
+iowa,warren,283
+iowa,washington,284
+iowa,wayne,285
+iowa,webster,286
+iowa,winnebago,287
+iowa,winneshiek,288
+iowa,woodbury,289
+iowa,worth,290
+iowa,wright,291
+kansas,allen,292
+kansas,anderson,293
+kansas,atchison,294
+kansas,barber,295
+kansas,barton,296
+kansas,bourbon,297
+kansas,brown,298
+kansas,butler,299
+kansas,chase,300
+kansas,chautauqua,301
+kansas,cherokee,302
+kansas,cheyenne,303
+kansas,clark,304
+kansas,clay,305
+kansas,cloud,306
+kansas,coffey,307
+kansas,comanche,308
+kansas,cowley,309
+kansas,crawford,310
+kansas,decatur,311
+kansas,dickinson,312
+kansas,doniphan,313
+kansas,douglas,314
+kansas,edwards,315
+kansas,elk,316
+kansas,ellis,317
+kansas,ellsworth,318
+kansas,finney,319
+kansas,ford,320
+kansas,franklin,321
+kansas,geary,322
+kansas,gove,323
+kansas,graham,324
+kansas,grant,325
+kansas,gray,326
+kansas,greeley,327
+kansas,greenwood,328
+kansas,hamilton,329
+kansas,harper,330
+kansas,harvey,331
+kansas,haskell,332
+kansas,hodgeman,333
+kansas,jackson,334
+kansas,jefferson,335
+kansas,jewell,336
+kansas,johnson,337
+kansas,kearny,338
+kansas,kingman,339
+kansas,kiowa,340
+kansas,labette,341
+kansas,lane,342
+kansas,leavenworth,343
+kansas,lincoln,344
+kansas,linn,345
+kansas,logan,346
+kansas,lyon,347
+kansas,marion,348
+kansas,marshall,349
+kansas,mcpherson,350
+kansas,meade,351
+kansas,miami,352
+kansas,mitchell,353
+kansas,montgomery,354
+kansas,morris,355
+kansas,morton,356
+kansas,nemaha,357
+kansas,neosho,358
+kansas,ness,359
+kansas,norton,360
+kansas,osage,361
+kansas,osborne,362
+kansas,ottawa,363
+kansas,pawnee,364
+kansas,phillips,365
+kansas,pottawatomie,366
+kansas,pratt,367
+kansas,rawlins,368
+kansas,reno,369
+kansas,republic,370
+kansas,rice,371
+kansas,riley,372
+kansas,rooks,373
+kansas,rush,374
+kansas,russell,375
+kansas,saline,376
+kansas,scott,377
+kansas,sedgwick,378
+kansas,seward,379
+kansas,shawnee,380
+kansas,sheridan,381
+kansas,sherman,382
+kansas,smith,383
+kansas,stafford,384
+kansas,stanton,385
+kansas,stevens,386
+kansas,sumner,387
+kansas,thomas,388
+kansas,trego,389
+kansas,wabaunsee,390
+kansas,wallace,391
+kansas,washington,392
+kansas,wichita,393
+kansas,wilson,394
+kansas,woodson,395
+kansas,wyandotte,396
+kentucky,adair,397
+kentucky,allen,398
+kentucky,anderson,399
+kentucky,ballard,400
+kentucky,barren,401
+kentucky,bath,402
+kentucky,boone,403
+kentucky,bourbon,404
+kentucky,boyle,405
+kentucky,bracken,406
+kentucky,breckinridge,407
+kentucky,bullitt,408
+kentucky,butler,409
+kentucky,caldwell,410
+kentucky,calloway,411
+kentucky,campbell,412
+kentucky,carlisle,413
+kentucky,carroll,414
+kentucky,casey,415
+kentucky,christian,416
+kentucky,clark,417
+kentucky,clinton,418
+kentucky,crittenden,419
+kentucky,cumberland,420
+kentucky,daviess,421
+kentucky,edmonson,422
+kentucky,estill,423
+kentucky,fayette,424
+kentucky,fleming,425
+kentucky,franklin,426
+kentucky,fulton,427
+kentucky,gallatin,428
+kentucky,garrard,429
+kentucky,grant,430
+kentucky,graves,431
+kentucky,grayson,432
+kentucky,green,433
+kentucky,greenup,434
+kentucky,hancock,435
+kentucky,hardin,436
+kentucky,harrison,437
+kentucky,hart,438
+kentucky,henderson,439
+kentucky,henry,440
+kentucky,hickman,441
+kentucky,hopkins,442
+kentucky,jefferson,443
+kentucky,jessamine,444
+kentucky,larue,445
+kentucky,laurel,446
+kentucky,lewis,447
+kentucky,lincoln,448
+kentucky,livingston,449
+kentucky,logan,450
+kentucky,lyon,451
+kentucky,madison,452
+kentucky,marion,453
+kentucky,marshall,454
+kentucky,mason,455
+kentucky,mccracken,456
+kentucky,mclean,457
+kentucky,meade,458
+kentucky,mercer,459
+kentucky,metcalfe,460
+kentucky,monroe,461
+kentucky,montgomery,462
+kentucky,muhlenberg,463
+kentucky,nelson,464
+kentucky,nicholas,465
+kentucky,ohio,466
+kentucky,oldham,467
+kentucky,owen,468
+kentucky,pendleton,469
+kentucky,powell,470
+kentucky,pulaski,471
+kentucky,rockcastle,472
+kentucky,rowan,473
+kentucky,russell,474
+kentucky,scott,475
+kentucky,shelby,476
+kentucky,simpson,477
+kentucky,spencer,478
+kentucky,taylor,479
+kentucky,todd,480
+kentucky,trigg,481
+kentucky,trimble,482
+kentucky,union,483
+kentucky,warren,484
+kentucky,washington,485
+kentucky,wayne,486
+kentucky,webster,487
+kentucky,woodford,488
+michigan,alcona,489
+michigan,alger,490
+michigan,allegan,491
+michigan,alpena,492
+michigan,antrim,493
+michigan,arenac,494
+michigan,barry,495
+michigan,bay,496
+michigan,berrien,497
+michigan,branch,498
+michigan,calhoun,499
+michigan,cass,500
+michigan,charlevoix,501
+michigan,cheboygan,502
+michigan,chippewa,503
+michigan,clare,504
+michigan,clinton,505
+michigan,delta,506
+michigan,eaton,507
+michigan,emmet,508
+michigan,genesee,509
+michigan,gladwin,510
+michigan,grand traverse,511
+michigan,gratiot,512
+michigan,hillsdale,513
+michigan,huron,514
+michigan,ingham,515
+michigan,ionia,516
+michigan,iosco,517
+michigan,isabella,518
+michigan,jackson,519
+michigan,kalamazoo,520
+michigan,kalkaska,521
+michigan,kent,522
+michigan,lake,523
+michigan,lapeer,524
+michigan,leelanau,525
+michigan,lenawee,526
+michigan,livingston,527
+michigan,mackinac,528
+michigan,macomb,529
+michigan,manistee,530
+michigan,mason,531
+michigan,mecosta,532
+michigan,menominee,533
+michigan,midland,534
+michigan,missaukee,535
+michigan,monroe,536
+michigan,montcalm,537
+michigan,montmorency,538
+michigan,muskegon,539
+michigan,newaygo,540
+michigan,oakland,541
+michigan,oceana,542
+michigan,ogemaw,543
+michigan,ontonagon,544
+michigan,osceola,545
+michigan,oscoda,546
+michigan,otsego,547
+michigan,ottawa,548
+michigan,presque isle,549
+michigan,saginaw,550
+michigan,sanilac,551
+michigan,schoolcraft,552
+michigan,shiawassee,553
+michigan,st clair,554
+michigan,st joseph,555
+michigan,tuscola,556
+michigan,van buren,557
+michigan,washtenaw,558
+michigan,wayne,559
+michigan,wexford,560
+minnesota,aitkin,561
+minnesota,anoka,562
+minnesota,becker,563
+minnesota,beltrami,564
+minnesota,benton,565
+minnesota,big stone,566
+minnesota,blue earth,567
+minnesota,brown,568
+minnesota,carver,569
+minnesota,cass,570
+minnesota,chippewa,571
+minnesota,chisago,572
+minnesota,clay,573
+minnesota,clearwater,574
+minnesota,cottonwood,575
+minnesota,crow wing,576
+minnesota,dakota,577
+minnesota,dodge,578
+minnesota,douglas,579
+minnesota,faribault,580
+minnesota,fillmore,581
+minnesota,freeborn,582
+minnesota,goodhue,583
+minnesota,grant,584
+minnesota,hennepin,585
+minnesota,houston,586
+minnesota,hubbard,587
+minnesota,isanti,588
+minnesota,itasca,589
+minnesota,jackson,590
+minnesota,kanabec,591
+minnesota,kandiyohi,592
+minnesota,kittson,593
+minnesota,koochiching,594
+minnesota,lac qui parle,595
+minnesota,lake of the woods,596
+minnesota,le sueur,597
+minnesota,lincoln,598
+minnesota,lyon,599
+minnesota,mahnomen,600
+minnesota,marshall,601
+minnesota,martin,602
+minnesota,mcleod,603
+minnesota,meeker,604
+minnesota,mille lacs,605
+minnesota,morrison,606
+minnesota,mower,607
+minnesota,murray,608
+minnesota,nicollet,609
+minnesota,nobles,610
+minnesota,norman,611
+minnesota,olmsted,612
+minnesota,otter tail,613
+minnesota,pennington,614
+minnesota,pine,615
+minnesota,pipestone,616
+minnesota,polk,617
+minnesota,pope,618
+minnesota,ramsey,619
+minnesota,red lake,620
+minnesota,redwood,621
+minnesota,renville,622
+minnesota,rice,623
+minnesota,rock,624
+minnesota,roseau,625
+minnesota,scott,626
+minnesota,sherburne,627
+minnesota,sibley,628
+minnesota,stearns,629
+minnesota,steele,630
+minnesota,stevens,631
+minnesota,swift,632
+minnesota,todd,633
+minnesota,traverse,634
+minnesota,wabasha,635
+minnesota,wadena,636
+minnesota,waseca,637
+minnesota,washington,638
+minnesota,watonwan,639
+minnesota,wilkin,640
+minnesota,winona,641
+minnesota,wright,642
+minnesota,yellow medicine,643
+missouri,adair,644
+missouri,andrew,645
+missouri,atchison,646
+missouri,audrain,647
+missouri,barry,648
+missouri,barton,649
+missouri,bates,650
+missouri,benton,651
+missouri,bollinger,652
+missouri,boone,653
+missouri,buchanan,654
+missouri,butler,655
+missouri,caldwell,656
+missouri,callaway,657
+missouri,camden,658
+missouri,cape girardeau,659
+missouri,carroll,660
+missouri,carter,661
+missouri,cass,662
+missouri,cedar,663
+missouri,chariton,664
+missouri,christian,665
+missouri,clark,666
+missouri,clay,667
+missouri,clinton,668
+missouri,cole,669
+missouri,cooper,670
+missouri,crawford,671
+missouri,dade,672
+missouri,dallas,673
+missouri,daviess,674
+missouri,de kalb,675
+missouri,dent,676
+missouri,douglas,677
+missouri,dunklin,678
+missouri,franklin,679
+missouri,gasconade,680
+missouri,gentry,681
+missouri,greene,682
+missouri,grundy,683
+missouri,harrison,684
+missouri,henry,685
+missouri,hickory,686
+missouri,holt,687
+missouri,howard,688
+missouri,howell,689
+missouri,iron,690
+missouri,jackson,691
+missouri,jasper,692
+missouri,jefferson,693
+missouri,johnson,694
+missouri,knox,695
+missouri,laclede,696
+missouri,lafayette,697
+missouri,lawrence,698
+missouri,lewis,699
+missouri,lincoln,700
+missouri,linn,701
+missouri,livingston,702
+missouri,macon,703
+missouri,madison,704
+missouri,maries,705
+missouri,marion,706
+missouri,mcdonald,707
+missouri,mercer,708
+missouri,miller,709
+missouri,mississippi,710
+missouri,moniteau,711
+missouri,monroe,712
+missouri,montgomery,713
+missouri,morgan,714
+missouri,new madrid,715
+missouri,newton,716
+missouri,nodaway,717
+missouri,oregon,718
+missouri,osage,719
+missouri,ozark,720
+missouri,pemiscot,721
+missouri,perry,722
+missouri,pettis,723
+missouri,phelps,724
+missouri,pike,725
+missouri,platte,726
+missouri,polk,727
+missouri,pulaski,728
+missouri,putnam,729
+missouri,ralls,730
+missouri,randolph,731
+missouri,ray,732
+missouri,reynolds,733
+missouri,ripley,734
+missouri,saline,735
+missouri,schuyler,736
+missouri,scotland,737
+missouri,scott,738
+missouri,shannon,739
+missouri,shelby,740
+missouri,st charles,741
+missouri,st clair,742
+missouri,st francois,743
+missouri,st louis,744
+missouri,ste genevieve,745
+missouri,ste. genevieve,746
+missouri,stoddard,747
+missouri,stone,748
+missouri,sullivan,749
+missouri,taney,750
+missouri,texas,751
+missouri,vernon,752
+missouri,warren,753
+missouri,washington,754
+missouri,wayne,755
+missouri,webster,756
+missouri,worth,757
+missouri,wright,758
+nebraska,adams,759
+nebraska,antelope,760
+nebraska,arthur,761
+nebraska,banner,762
+nebraska,blaine,763
+nebraska,boone,764
+nebraska,box butte,765
+nebraska,boyd,766
+nebraska,brown,767
+nebraska,buffalo,768
+nebraska,burt,769
+nebraska,butler,770
+nebraska,cass,771
+nebraska,cedar,772
+nebraska,chase,773
+nebraska,cherry,774
+nebraska,cheyenne,775
+nebraska,clay,776
+nebraska,colfax,777
+nebraska,cuming,778
+nebraska,custer,779
+nebraska,dakota,780
+nebraska,dawson,781
+nebraska,deuel,782
+nebraska,dixon,783
+nebraska,dodge,784
+nebraska,douglas,785
+nebraska,dundy,786
+nebraska,fillmore,787
+nebraska,franklin,788
+nebraska,frontier,789
+nebraska,furnas,790
+nebraska,gage,791
+nebraska,garden,792
+nebraska,garfield,793
+nebraska,gosper,794
+nebraska,greeley,795
+nebraska,hall,796
+nebraska,hamilton,797
+nebraska,harlan,798
+nebraska,hayes,799
+nebraska,hitchcock,800
+nebraska,holt,801
+nebraska,howard,802
+nebraska,jefferson,803
+nebraska,johnson,804
+nebraska,kearney,805
+nebraska,keith,806
+nebraska,keya paha,807
+nebraska,knox,808
+nebraska,lancaster,809
+nebraska,lincoln,810
+nebraska,logan,811
+nebraska,loup,812
+nebraska,madison,813
+nebraska,mcpherson,814
+nebraska,merrick,815
+nebraska,morrill,816
+nebraska,nance,817
+nebraska,nemaha,818
+nebraska,nuckolls,819
+nebraska,otoe,820
+nebraska,pawnee,821
+nebraska,perkins,822
+nebraska,phelps,823
+nebraska,pierce,824
+nebraska,platte,825
+nebraska,polk,826
+nebraska,red willow,827
+nebraska,richardson,828
+nebraska,rock,829
+nebraska,saline,830
+nebraska,sarpy,831
+nebraska,saunders,832
+nebraska,scotts bluff,833
+nebraska,seward,834
+nebraska,sheridan,835
+nebraska,sherman,836
+nebraska,sioux,837
+nebraska,stanton,838
+nebraska,thayer,839
+nebraska,thomas,840
+nebraska,thurston,841
+nebraska,valley,842
+nebraska,washington,843
+nebraska,wayne,844
+nebraska,webster,845
+nebraska,wheeler,846
+nebraska,york,847
+north dakota,adams,848
+north dakota,barnes,849
+north dakota,benson,850
+north dakota,bottineau,851
+north dakota,bowman,852
+north dakota,burke,853
+north dakota,burleigh,854
+north dakota,cass,855
+north dakota,cavalier,856
+north dakota,dickey,857
+north dakota,divide,858
+north dakota,eddy,859
+north dakota,emmons,860
+north dakota,foster,861
+north dakota,golden valley,862
+north dakota,grand forks,863
+north dakota,grant,864
+north dakota,griggs,865
+north dakota,hettinger,866
+north dakota,kidder,867
+north dakota,la moure,868
+north dakota,logan,869
+north dakota,mchenry,870
+north dakota,mcintosh,871
+north dakota,mckenzie,872
+north dakota,mclean,873
+north dakota,mercer,874
+north dakota,morton,875
+north dakota,mountrail,876
+north dakota,nelson,877
+north dakota,oliver,878
+north dakota,pembina,879
+north dakota,pierce,880
+north dakota,ramsey,881
+north dakota,ransom,882
+north dakota,renville,883
+north dakota,richland,884
+north dakota,rolette,885
+north dakota,sargent,886
+north dakota,sheridan,887
+north dakota,sioux,888
+north dakota,steele,889
+north dakota,stutsman,890
+north dakota,towner,891
+north dakota,traill,892
+north dakota,walsh,893
+north dakota,ward,894
+north dakota,wells,895
+north dakota,williams,896
+ohio,adams,897
+ohio,allen,898
+ohio,ashland,899
+ohio,ashtabula,900
+ohio,athens,901
+ohio,auglaize,902
+ohio,brown,903
+ohio,butler,904
+ohio,carroll,905
+ohio,champaign,906
+ohio,clark,907
+ohio,clermont,908
+ohio,clinton,909
+ohio,columbiana,910
+ohio,coshocton,911
+ohio,crawford,912
+ohio,cuyahoga,913
+ohio,darke,914
+ohio,defiance,915
+ohio,delaware,916
+ohio,erie,917
+ohio,fairfield,918
+ohio,fayette,919
+ohio,franklin,920
+ohio,fulton,921
+ohio,gallia,922
+ohio,geauga,923
+ohio,greene,924
+ohio,guernsey,925
+ohio,hamilton,926
+ohio,hancock,927
+ohio,hardin,928
+ohio,harrison,929
+ohio,henry,930
+ohio,highland,931
+ohio,hocking,932
+ohio,holmes,933
+ohio,huron,934
+ohio,jackson,935
+ohio,jefferson,936
+ohio,knox,937
+ohio,lake,938
+ohio,lawrence,939
+ohio,licking,940
+ohio,logan,941
+ohio,lorain,942
+ohio,lucas,943
+ohio,madison,944
+ohio,mahoning,945
+ohio,marion,946
+ohio,medina,947
+ohio,meigs,948
+ohio,mercer,949
+ohio,miami,950
+ohio,monroe,951
+ohio,montgomery,952
+ohio,morgan,953
+ohio,morrow,954
+ohio,muskingum,955
+ohio,ottawa,956
+ohio,paulding,957
+ohio,perry,958
+ohio,pickaway,959
+ohio,pike,960
+ohio,portage,961
+ohio,preble,962
+ohio,putnam,963
+ohio,richland,964
+ohio,ross,965
+ohio,sandusky,966
+ohio,scioto,967
+ohio,seneca,968
+ohio,shelby,969
+ohio,stark,970
+ohio,summit,971
+ohio,trumbull,972
+ohio,tuscarawas,973
+ohio,union,974
+ohio,van wert,975
+ohio,vinton,976
+ohio,warren,977
+ohio,washington,978
+ohio,wayne,979
+ohio,williams,980
+ohio,wood,981
+ohio,wyandot,982
+south dakota,aurora,983
+south dakota,beadle,984
+south dakota,bennett,985
+south dakota,bon homme,986
+south dakota,brookings,987
+south dakota,brown,988
+south dakota,brule,989
+south dakota,buffalo,990
+south dakota,butte,991
+south dakota,campbell,992
+south dakota,charles mix,993
+south dakota,clark,994
+south dakota,clay,995
+south dakota,codington,996
+south dakota,corson,997
+south dakota,custer,998
+south dakota,davison,999
+south dakota,day,1000
+south dakota,deuel,1001
+south dakota,dewey,1002
+south dakota,douglas,1003
+south dakota,edmunds,1004
+south dakota,faulk,1005
+south dakota,grant,1006
+south dakota,gregory,1007
+south dakota,haakon,1008
+south dakota,hamlin,1009
+south dakota,hand,1010
+south dakota,hanson,1011
+south dakota,hughes,1012
+south dakota,hutchinson,1013
+south dakota,hyde,1014
+south dakota,jackson,1015
+south dakota,jerauld,1016
+south dakota,jones,1017
+south dakota,kingsbury,1018
+south dakota,lake,1019
+south dakota,lincoln,1020
+south dakota,lyman,1021
+south dakota,marshall,1022
+south dakota,mccook,1023
+south dakota,mcpherson,1024
+south dakota,meade,1025
+south dakota,mellette,1026
+south dakota,miner,1027
+south dakota,minnehaha,1028
+south dakota,moody,1029
+south dakota,oglala lakota,1030
+south dakota,pennington,1031
+south dakota,perkins,1032
+south dakota,potter,1033
+south dakota,roberts,1034
+south dakota,sanborn,1035
+south dakota,spink,1036
+south dakota,stanley,1037
+south dakota,sully,1038
+south dakota,todd,1039
+south dakota,tripp,1040
+south dakota,turner,1041
+south dakota,union,1042
+south dakota,walworth,1043
+south dakota,yankton,1044
+south dakota,ziebach,1045
