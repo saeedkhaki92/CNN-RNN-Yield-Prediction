@@ -47,9 +47,9 @@ Let nw, ns, np, and nss be the number of weather components, soil components mea
 - `number of soil components measured at the surface (nss)`: 4
 
 
-## Data Availability Statement
+## Downloading the Data
 
-The data analyzed in this study was obtained from different public data sources. 
+### The data analyzed in this study was obtained from different public data sources. Our team spent a lot of time cleaning and gathering the data. Please cite our papers if you use our data in your research.  
 
 ### To download the corn data use the following link:
 
