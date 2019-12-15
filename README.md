@@ -49,5 +49,12 @@ Let nw, ns, np, and nss be the number of weather components, soil components mea
 
 ## Data Availability Statement
 
-The data analyzed in this study was obtained from different public data sources.
+The data analyzed in this study was obtained from different public data sources. 
+
+### To download the corn data use the following link:
+
+
+
+
+
 
