@@ -54,6 +54,9 @@ Let nw, ns, np, and nss be the number of weather components, soil components mea
 ### To download the corn data use the following link:
 
 
+### To download the soybean data use the following link:
+
+
 
 
 
