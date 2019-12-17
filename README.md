@@ -53,10 +53,9 @@ For detailed description of the variables, please read the data section of the p
 
 ### The data analyzed in this study was obtained from different public data sources. Our team spent a lot of time cleaning and gathering the data. Please cite our papers if you use our data in your research.  
 
-### To download the corn data use the following link:
+### To get the download link, please send your requset to the following email:
 
-
-### To download the soybean data use the following link:
+skhaki@iastate.edu
 
 
 
