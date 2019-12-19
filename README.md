@@ -59,6 +59,13 @@ skhaki@iastate.edu
 
 
 
+## Success Strory of the Model
 
+We used the proposed method in practice in July 2019 for the prediction of the soybean yield of Iowa, Illinois, and Indiana states. This year soybean yield after harvesting published by USDA about two weeks ago. The actual yields are very close to what we predicted in July, which are as follows:
+
+State         Predicted Yield in July 2019          Actual Yield 
+Iowa                  53.44 (bu/ac)                  53 (bu/ac)
+Illinois              48.71 (bu/ac)                  51 (bu/ac)
+Indiana               47.01 (bu/ac)                  49 (bu/ac)
 
 
