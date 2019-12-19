@@ -59,7 +59,7 @@ skhaki@iastate.edu
 
 
 
-## Success Strory of the Model
+## Success Strory of the Model in Real World Application
 
 We used the proposed method in practice in July 2019 for the prediction of the soybean yield of Iowa, Illinois, and Indiana states. This year soybean yield after harvesting published by USDA about two weeks ago. The actual yields are very close to what we predicted in July, which are as follows:
 
@@ -71,8 +71,3 @@ We used the proposed method in practice in July 2019 for the prediction of the s
 
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
