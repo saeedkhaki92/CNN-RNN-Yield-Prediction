@@ -70,3 +70,9 @@ We used the proposed method in practice in July 2019 for the prediction of the s
 |Indiana|               |47.01 (bu/ac)|                  |49 (bu/ac)|
 
 
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
