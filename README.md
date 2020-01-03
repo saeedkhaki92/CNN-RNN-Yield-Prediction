@@ -57,6 +57,7 @@ For detailed description of the variables, please read the data section of the p
 
 skhaki@iastate.edu
 
+### Data will be availabe after publication of the paper in the journal (In about two weeks)
 
 
 ## Success Strory of the Model in the Real World Application
