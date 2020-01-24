@@ -7,12 +7,19 @@ This repository contains codes for the paper entitled <a href="https://www.front
 
 ### Please cite our paper if you use our code or data since it took a lot of time gathering and cleaning the data. Thanks!
 ```
-@article{khaki2019cnn,
-  title={A CNN-RNN Framework for Crop Yield Prediction},
-  author={Khaki, Saeed and Wang, Lizhi and Archontoulis, Sotirios V},
-  journal={arXiv preprint arXiv:1911.09045},
-  year={2019}
+@article{Khaki_2020,
+   title={A CNN-RNN Framework for Crop Yield Prediction},
+   volume={10},
+   ISSN={1664-462X},
+   url={http://dx.doi.org/10.3389/fpls.2019.01750},
+   DOI={10.3389/fpls.2019.01750},
+   journal={Frontiers in Plant Science},
+   publisher={Frontiers Media SA},
+   author={Khaki, Saeed and Wang, Lizhi and Archontoulis, Sotirios V.},
+   year={2020},
+   month={Jan}
 }
+
 
 
 @article{khaki2019crop,
