@@ -2,7 +2,7 @@
 
 
 
-This repository contains codes for the paper entitled <a href="https://www.frontiersin.org/articles/10.3389/fpls.2019.01750/full" target="_blank">"A CNN-RNN Framework for Crop Yield Prediction"</a> published in <a href="https://www.frontiersin.org/articles/10.3389/fpls.2019.01750/full" target="_blank"> Frontiers in Plant Science Journal</a> . The paper was authored by Saeed Khaki, Lizhi Wang, and Sotirios Archontoulis. In this paper, we proposed a framework for crop yield prediction.
+This repository contains codes for the paper entitled <a href="https://www.frontiersin.org/articles/10.3389/fpls.2019.01750/full" target="_blank">"A CNN-RNN Framework for Crop Yield Prediction"</a> published in Frontiers in Plant Science Journal. The paper was authored by Saeed Khaki, Lizhi Wang, and Sotirios Archontoulis. In this paper, we proposed a framework for crop yield prediction.
 
 
 ### Please cite our paper if you use our code or data since it took a lot of time gathering and cleaning the data. Thanks!
@@ -53,7 +53,7 @@ For detailed description of the variables, please read the data section of the p
 
 ### The data analyzed in this study was obtained from different public data sources. Our team spent a lot of time cleaning and gathering the data. Please cite our papers if you use our data in your research.  
 
-### To get the download link, please send your requset to the following email:
+### To get the download link for the full version of the data, please send your requset to the following email:
 
 skhaki@iastate.edu
 
