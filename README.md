@@ -50,11 +50,20 @@ Let nw, ns, np, and nss be the number of weather components, soil components mea
 
 - `number of weather components (nw)`: 6 components.
 
- In the CSV files, they are named Wij, where i is the index of weather component and j is the week of year; i=1,...6, j=1,...,52. 
+ In the CSV files, they are named Wij, where i is the index of weather component and j is the index of week of year; i=1,...6, j=1,...,52. 
  
 - `number of soil components measured at different depth (ns)`: 10 components.
+
+In the CSV files, they are named Sij, where i is the index of soil component and j is the index of soil depth; i=1,...,10, j=1,...,10. 
+
 - `number of planting date components (np)`: 16 (corn), 14 (soybean)
+
+
+In the CSV files, they are named Pi, where i is the index of planting date week; i=1,...,14 
+
 - `number of soil components measured at the surface (nss)`: 4
+
+In the CSV files, they are named S_surface. 
 
 For detailed description of the variables, please read the data section of the paper.
 
