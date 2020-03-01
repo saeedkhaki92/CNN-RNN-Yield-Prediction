@@ -661,7 +661,7 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
 
 
 
-BigX = np.load('./DATA_soybean') ##order W(52*6) S(100) P(14) S_extra(4)
+BigX = np.load('././Soybeans_Data.npz') ##order W(52*6) S(100) P(14) S_extra(4)
 X=BigX['data']
 
 X_tr=X[X[:,1]<=2017]
