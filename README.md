@@ -44,6 +44,10 @@ Please install the following packages in Python3:
 - matplotlib
 
 
+## Data Convertion
+
+Please notice that the python code's input is '.npz' format, so you should convert the 'csv' data to '.npz' using the 'convert_csv_to_npz.py'. Please name your files properly and change the name of the file in the main code files, otherwise the code will not run and produce error 'there is not such file'.
+
 ## Dimension of Input Data
 
 Let nw, ns, np, and nss be the number of weather components, soil components meaured at different depth, planting time component, and soil components meaured at the surface. Let m be the total number of observations. So `X` is `m-by-(nw+ns+np+nss)`. We added three columns to the begining of the matrix `X` which are location_id, year, and yield response variable.  If input data is not in this format, the code would not run.
