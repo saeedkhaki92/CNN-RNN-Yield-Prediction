@@ -58,16 +58,15 @@ Let nw, ns, np, and nss be the number of weather components, soil components mea
  
 - `number of soil components measured at different depth (ns)`: 10 components.
 
-In the CSV files, they are named Sij, where i is the index of soil component and j is the index of soil depth; i=1,...,10, j=1,...,10. 
-
-- `number of planting date components (np)`: 16 (corn), 14 (soybean)
-
 
 In the CSV files, they are named Pi, where i is the index of planting date week; i=1,...,14 
 
 - `number of soil components measured at the surface (nss)`: 4
 
-In the CSV files, they are named S_surface. 
+## The clean version of the soil part of the data is not available, you can get the original data from the following source:
+
+- Soil Survey Staff. Gridded Soil Survey Geographic (gSSURGO) Database for the United States of America and the Territories, Commonwealths, and Island Nations served by the USDA-NRCS (United States Department of Agriculture, Natural Resources Conservation Service).
+
 
 For detailed description of the variables, please read the data section of the paper.
 
