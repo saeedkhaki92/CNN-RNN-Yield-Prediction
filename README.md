@@ -76,7 +76,7 @@ For detailed description of the variables, please read the data section of the p
 
 ### The data analyzed in this study was obtained from different public data sources. Our team spent a lot of time cleaning and gathering the data. Please cite our papers if you use our data in your research.  
 
-### To get the download link for the full version of the data, please send your requset to the following email:
+### To get the download link for of the data and just for academic purposes (Non-commercial), please send your requset to the following email:
 
 skhaki@iastate.edu
 
