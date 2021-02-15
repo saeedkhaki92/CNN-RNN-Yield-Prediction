@@ -32,6 +32,14 @@ This repository contains codes for the paper entitled <a href="https://www.front
 }
 
 
+@article{khaki2020yieldnet,
+  title={YieldNet: A Convolutional Neural Network for Simultaneous Corn and Soybean Yield Prediction Based on Remote Sensing Data},
+  author={Khaki, Saeed and Pham, Hieu and Wang, Lizhi},
+  journal={arXiv preprint arXiv:2012.03129},
+  year={2020}
+}
+
+
 ```
 
 
