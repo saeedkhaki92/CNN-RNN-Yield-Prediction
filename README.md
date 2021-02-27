@@ -77,7 +77,7 @@ In the CSV files, they are named Pi, where i is the index of planting date week;
 
 
 
-## The soil data part has been updated with new soil data from <a href="https://www.isric.org/explore/soilgrids/faq-soilgrids" target="_blank">SoilGrids250m</a>  and it is different from <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/home/?cid=nrcs142p2_053628" target="_blank">the original soil data</a> used in the CNN-RNN paper. It has 11 variables measured at 6 different depths (0-5cm, 5-15cm,15-30cm,30-60cm,60-100cm,100-200cm) with 250 square meter resolution. The Name of the soil variables are as follows:
+## The soil data part has been updated with new soil data from <a href="https://www.isric.org/explore/soilgrids/faq-soilgrids" target="_blank">SoilGrids250m</a>  and it is different from <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/home/?cid=nrcs142p2_053628" target="_blank">the original soil data</a> used in the CNN-RNN paper. It has 11 variables measured at 6 different depths (0-5cm, 5-15cm,15-30cm,30-60cm,60-100cm,100-200cm) with 250 square meter resolution. The name of the soil variables are as follows:
 
 
 <img src="soilgrid250_vars.png" width="200" height="400">
