@@ -83,12 +83,7 @@ In the CSV files, they are named Pi, where i is the index of planting date week;
 <img src="soilgrid250_vars.png" width="200" height="400">
 
 
-## The clean version of the soil part of the data is not available, you can get the original data from the following source:
 
-- Soil Survey Staff. Gridded Soil Survey Geographic (gSSURGO) Database for the United States of America and the Territories, Commonwealths, and Island Nations served by the USDA-NRCS (United States Department of Agriculture, Natural Resources Conservation Service).
-
-
-For detailed description of the variables, please read the data section of the paper.
 
 
 ## Downloading the Data
