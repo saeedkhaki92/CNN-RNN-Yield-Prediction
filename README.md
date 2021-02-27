@@ -5,7 +5,7 @@
 This repository contains codes for the paper entitled <a href="https://www.frontiersin.org/articles/10.3389/fpls.2019.01750/full" target="_blank">"A CNN-RNN Framework for Crop Yield Prediction"</a> published in Frontiers in Plant Science Journal. The paper was authored by Saeed Khaki, Lizhi Wang, and Sotirios Archontoulis. In this paper, we proposed a framework for crop yield prediction.
 
 
-### Please cite our paper if you use our code or data since it took a lot of time gathering and cleaning the data. Thanks!
+### We spend a lot of time gathering and cleaning data from different publicly available sources (~300GB) and now we are sharing the final ready-to-use CSV file with you . Please cite our papers which are all related to crop yield prediction if you use our data or codes. Thanks!
 ```
 @article{Khaki_2020,
    title={A CNN-RNN Framework for Crop Yield Prediction},
@@ -31,6 +31,7 @@ This repository contains codes for the paper entitled <a href="https://www.front
   publisher={Frontiers Media SA}
 }
 
+@article{khaki2020predicting, title={Predicting yield performance of parents in plant breeding: A neural collaborative filtering approach}, author={Khaki, Saeed and Khalilzadeh, Zahra and Wang, Lizhi}, journal={Plos one}, volume={15}, number={5}, pages={e0233382}, year={2020}, publisher={Public Library of Science San Francisco, CA USA}}
 
 @article{khaki2020yieldnet,
   title={YieldNet: A Convolutional Neural Network for Simultaneous Corn and Soybean Yield Prediction Based on Remote Sensing Data},
@@ -38,6 +39,8 @@ This repository contains codes for the paper entitled <a href="https://www.front
   journal={arXiv preprint arXiv:2012.03129},
   year={2020}
 }
+
+
 
 
 ```
@@ -58,18 +61,20 @@ Please notice that the python code's input is '.npz' format, so you should conve
 
 ## Dimension of Input Data
 
-Let nw, ns, np, and nss be the number of weather components, soil components meaured at different depth, planting time component, and soil components meaured at the surface. Let m be the total number of observations. So `X` is `m-by-(nw+ns+np+nss)`. We added three columns to the begining of the matrix `X` which are location_id, year, and yield response variable.  If input data is not in this format, the code would not run.
+Let nw, ns, np, and nss be the number of weather components, soil components meaured at different depth, planting time component, and soil components meaured at the surface. Let m be the total number of observations. So `X` is `m-by-(nw+ns+np)`. We added three columns to the begining of the matrix `X` which are location_id, year, and yield response variable.  If input data is not in this format, the code would not run.
 
 - `number of weather components (nw)`: 6 components.
 
  In the CSV files, they are named Wij, where i is the index of weather component and j is the index of week of year; i=1,...6, j=1,...,52. 
  
-- `number of soil components measured at different depth (ns)`: 10 components.
+- `number of soil components measured at different depth (ns)`: 11 components.
+
+ In the CSV files, they are named Sij, where i is the index of soil component and j is the index of depth; i=1,...11, j=1,...,6. 
 
 
 In the CSV files, they are named Pi, where i is the index of planting date week; i=1,...,14 
 
-- `number of soil components measured at the surface (nss)`: 4
+
 
 
 ## The soil data part has been updated with new soil data from <a href="https://www.isric.org/explore/soilgrids/faq-soilgrids" target="_blank">SoilGrids250m</a>  and it is different from <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/home/?cid=nrcs142p2_053628" target="_blank">the original soil data</a> used in the CNN-RNN paper. It has 11 variables measured at 6 different depths (0-5cm, 5-15cm,15-30cm,30-60cm,60-100cm,100-200cm) with 250 square meter resolution. The Name of the soil variables are as follows:
