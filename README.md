@@ -31,7 +31,9 @@ This repository contains codes for the paper entitled <a href="https://www.front
   publisher={Frontiers Media SA}
 }
 
-@article{khaki2020predicting, title={Predicting yield performance of parents in plant breeding: A neural collaborative filtering approach}, author={Khaki, Saeed and Khalilzadeh, Zahra and Wang, Lizhi}, journal={Plos one}, volume={15}, number={5}, pages={e0233382}, year={2020}, publisher={Public Library of Science San Francisco, CA USA}}
+@article{khaki2020predicting, title={Predicting yield performance of parents in plant breeding: A neural collaborative filtering approach}, 
+author={Khaki, Saeed and Khalilzadeh, Zahra and Wang, Lizhi}, journal={Plos one}, volume={15}, number={5}, pages={e0233382}, 
+year={2020}, publisher={Public Library of Science San Francisco, CA USA}}
 
 @article{khaki2020yieldnet,
   title={YieldNet: A Convolutional Neural Network for Simultaneous Corn and Soybean Yield Prediction Based on Remote Sensing Data},
