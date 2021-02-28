@@ -6,6 +6,15 @@ This repository contains codes for the paper entitled <a href="https://www.front
 
 
 ### We spend a lot of time gathering and cleaning data from different publicly available sources (~300GB) and now we are sharing the final ready-to-use CSV file with you . Please cite our papers which are all related to crop yield prediction if you use our data or codes. Thanks!
+
+
+## Downloading the Data
+
+### To get the download link for of the full data and just for academic purposes (Non-commercial), please send your requset to the following email:
+
+skhaki@iastate.edu
+
+
 ```
 @article{Khaki_2020,
    title={A CNN-RNN Framework for Crop Yield Prediction},
