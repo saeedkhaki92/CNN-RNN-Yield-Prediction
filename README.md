@@ -10,7 +10,7 @@ This repository contains codes for the paper entitled <a href="https://www.front
 
 ## Downloading the Data
 
-### To get the download link for of the full data and just for academic purposes (Non-commercial), please click [here](https://drive.google.com/file/d/17Qp0cZnQ8fp9Q_q4T9l31QijaYJ5mSW6/view?usp=sharing).
+### To get the download link for of the full soybean data and just for academic purposes (Non-commercial), please click [here](https://drive.google.com/file/d/17Qp0cZnQ8fp9Q_q4T9l31QijaYJ5mSW6/view?usp=sharing).
 
 
 ```
