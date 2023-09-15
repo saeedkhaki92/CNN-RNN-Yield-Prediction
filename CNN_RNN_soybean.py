@@ -13,26 +13,9 @@ def conv_res_part_P(P_t,f,is_training,var_name):
     #############stage 1
     X=tf.contrib.layers.flatten(P_t)
 
-    #X=tf.gather(X,indices=[0,1,2,3,4,5,6,7,8,9],axis=1)
-
-    #X = tf.layers.conv1d(S_t, filters=6, kernel_size=3, strides=1, padding='same',
-     #                    kernel_initializer=tf.contrib.layers.xavier_initializer(), activation=None,
-      #                   name='Conv00' + var_name, data_format='channels_last', reuse=tf.AUTO_REUSE)
-
-    #X=tf.contrib.layers.fully_connected(inputs=X, num_outputs=1, activation_fn=tf.nn.relu,
-     #                                weights_initializer=tf.contrib.layers.xavier_initializer(),
-      #                               biases_initializer=tf.zeros_initializer())
-
-    #X = tf.contrib.layers.fully_connected(inputs=X, num_outputs=4, activation_fn=tf.nn.relu,
-     #                                     weights_initializer=tf.contrib.layers.xavier_initializer(),
-      #                                    biases_initializer=tf.zeros_initializer())
 
     print('conv2 out P', X)
-    #X = tf.layers.conv1d(X, filters=12, kernel_size=2, strides=s0, padding='valid',
-     #                    kernel_initializer=tf.contrib.layers.xavier_initializer(), activation=None,
-      #                   name='Conv3' + var_name, data_format='channels_last', reuse=tf.AUTO_REUSE)
 
-    #X = tf.nn.relu(X)
 
     return X
 
