@@ -3,11 +3,11 @@ import pandas as pd
 
 
 
-data_csv=pd.read_csv('./name_of_your_file.csv',delimiter=',')
+data_csv=pd.read_csv('./corn_samples.csv',delimiter=',')
 
 data_npz=np.array(data_csv)
 
-np.savez_compressed('./name_of_your_file',data=data_npz)
+np.savez_compressed('./corn_samples',data=data_npz)
 
 
 
