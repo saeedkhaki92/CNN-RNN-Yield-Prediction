@@ -371,7 +371,10 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
         Y_t_2 = tf.placeholder(shape=[None, 4], dtype=tf.float32, name='Y_t_2')
 
 
+        # for seperating the training and testing phase. Because the training include the dropouts,
+        #   but in testing dropouts are removed to increase the accuracy.
         is_training=tf.placeholder(dtype=tf.bool)
+        # shpae = [] meaning it holds the scaller value without the dimention shape
         lr=tf.placeholder(shape=[],dtype=tf.float32,name='learning_rate')
         dropout = tf.placeholder(tf.float32,name='dropout')
 
@@ -611,7 +614,7 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
 
 
 
-BigX = np.load('./DATA_corn') ##order W(52*6) S(100) P(16) S_extra(4)
+BigX = np.load('./corn_samples.npz') ##order W(52*6) S(100) P(16) S_extra(4)
 
 X=BigX['data']
 
@@ -622,9 +625,10 @@ X_tr=X_tr[:,3:]
 
 
 
-
+# mean with axis=0 means respect to columns
 M=np.mean(X_tr,axis=0,keepdims=True)
 S=np.std(X_tr,axis=0,keepdims=True)
+# normalization step, z score calculation for all the variable
 X[:,3:]=(X[:,3:]-M)/S
 
 
@@ -645,7 +649,7 @@ print("train data",np.sum(np.logical_not(Index)))
 print("test data",np.sum(Index))
 
 
-
+# Validation year crop yeild mean and std.
 print('Std %.2f and mean %.2f  of test ' %(np.std(X[Index][:,2]),np.mean(X[Index][:,2])))
 
 
