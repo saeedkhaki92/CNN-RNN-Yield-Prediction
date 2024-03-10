@@ -105,7 +105,7 @@ In the CSV files, they are named Pi, where i is the index of planting date week;
 
 ### To get the download link for of the data and just for academic purposes (Non-commercial), please send your requset to the following email:
 
-skhaki@iastate.edu
+saeed_khaki@outlook.com
 
 
 
