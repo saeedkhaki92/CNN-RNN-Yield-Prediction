@@ -641,9 +641,10 @@ X_tr=X_tr[:,3:]
 
 
 
-
+# mean with axis=0 means respect to columns
 M=np.mean(X_tr,axis=0,keepdims=True)
 S=np.std(X_tr,axis=0,keepdims=True)
+# normalization step, z score calculation for all the variable
 X[:,3:]=(X[:,3:]-M)/S
 
 
@@ -664,7 +665,7 @@ print("train data",np.sum(np.logical_not(Index)))
 print("test data",np.sum(Index))
 
 
-
+# Validation year crop yeild mean and std.
 print('Std %.2f and mean %.2f  of test ' %(np.std(X[Index][:,2]),np.mean(X[Index][:,2])))
 
 
