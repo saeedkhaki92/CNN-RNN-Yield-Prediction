@@ -1,70 +1,61 @@
 import numpy as np
 import time
-
-
 import tensorflow as tf
 
 
-
 def conv_res_part_P(P_t,f,is_training,var_name):
-
-
+    print("----- Flatten layer on p ----", P_t.shape)
     X=tf.contrib.layers.flatten(P_t)
-
-
-    print('conv2 out P', X)
-
-
+    print('conv2 out P', X.shape)
     return X
 
-
-
 def conv_res_part_E(E_t,f,is_training,var_name):
-
     s0 = 1
-
+    # First Conv Layer
+    print("----Conv Layer 1 ------ Start E_t shape :", E_t.shape)
     X = tf.layers.conv1d(E_t, filters=8, kernel_size=9, strides=1, padding='valid',
                          kernel_initializer=tf.contrib.layers.xavier_initializer(), activation=None,
                          name='Conv00' + var_name, data_format='channels_last', reuse=tf.AUTO_REUSE)
-
     X = tf.nn.relu(X)
     print('conv1 out E', X)
-
+    print('conv1 out E, X shape', X.shape)
     X = tf.layers.average_pooling1d(X, pool_size=2, strides=2, data_format='channels_last', name='average_pool')
+    print('conv1 out E, with average pooling, X shape: ', X.shape)
 
+    # Second Conv Layer
+    print("------Conv Layer 2 ----- Start X shape :",X.shape)
     X = tf.layers.conv1d(X, filters=12, kernel_size=3, strides=1, padding='valid',
                          kernel_initializer=tf.contrib.layers.xavier_initializer(), activation=None,
                          name='Conv0' + var_name, data_format='channels_last', reuse=tf.AUTO_REUSE)
-
     X = tf.nn.relu(X)
-
-    print('conv2 out E', X)
-
+    print('conv2 out E, X shape', X.shape)
+    
     X = tf.layers.average_pooling1d(X, pool_size=2, strides=2, data_format='channels_last', name='average_pool')
+    print('conv2 out E, with average pooling, X shape :', X.shape)
 
+
+    # Third Conv Layer
+    print("------Conv Layer 3 ----- Start X shape :",X.shape)
     X = tf.layers.conv1d(X, filters=16, kernel_size=3, strides=1, padding='valid',
                          kernel_initializer=tf.contrib.layers.xavier_initializer(), activation=None,
                          name='Conv1'+var_name, data_format='channels_last',reuse=tf.AUTO_REUSE)
 
-
-
-
     X = tf.nn.relu(X)
+    print('conv3 out E, X shape', X.shape)
     X = tf.layers.average_pooling1d(X, pool_size=2, strides=2, data_format='channels_last', name='average_pool')
-    print('conv3 out E',X)
+    print('conv3 out E, with average pooling, X shape :', X.shape)
 
 
+    # Fouth Conv Layer
+    print("------Conv Layer 4 ----- Start X shape :",X.shape)
     X = tf.layers.conv1d(X, filters=20, kernel_size=3, strides=s0, padding='valid',
                          kernel_initializer=tf.contrib.layers.xavier_initializer(), activation=None,
                          name='Conv2'+var_name, data_format='channels_last',reuse=tf.AUTO_REUSE)
     X = tf.nn.relu(X)
+    print('conv4 out E, X shape', X.shape)
     X = tf.layers.average_pooling1d(X, pool_size=2, strides=2, data_format='channels_last', name='average_pool')
-
-
+    print('conv4 out E, with average pooling, X shape :', X.shape)
     print('conv4',X)
-
-
-
     return X
 
 
@@ -72,40 +63,32 @@ def conv_res_part_E(E_t,f,is_training,var_name):
 
 def conv_res_part_S(S_t,f,is_training,var_name):
 
-
-
-
+    # First Conv Layer
+    print("---------conv_res_part_S layer 1 input : ", S_t.shape)
     X = tf.layers.conv1d(S_t, filters=4, kernel_size=3, strides=1, padding='valid',
                          kernel_initializer=tf.contrib.layers.xavier_initializer(), activation=None,
                          name='Conv1'+var_name, data_format='channels_last',reuse=tf.AUTO_REUSE)
-
-
-
     X = tf.nn.relu(X)
-
+    print("conv_res_part_S layer 1 output : ", X.shape)
     print('conv1 out S',X)
+    # X = tf.layers.average_pooling1d(X, pool_size=2, strides=2, data_format='channels_last', name='average_pool')
+    print("conv_res_part_S layer 1, average pooling : ", X.shape)
 
-    X = tf.layers.average_pooling1d(X, pool_size=2, strides=2, data_format='channels_last', name='average_pool')
-
+    print("---------conv_res_part_S layer 2 input : ", X.shape)
     X = tf.layers.conv1d(X, filters=8, kernel_size=3, strides=1, padding='valid',
                          kernel_initializer=tf.contrib.layers.xavier_initializer(), activation=None,
                          name='Conv2'+var_name, data_format='channels_last',reuse=tf.AUTO_REUSE)
-
-
     X = tf.nn.relu(X)
-
+    print("conv_res_part_S layer 1 output : ", X.shape)
     print('conv2 out S', X)
 
+    print("---------conv_res_part_S layer 3 input : ", X.shape)
     X = tf.layers.conv1d(X, filters=12, kernel_size=2, strides=1, padding='valid',
                          kernel_initializer=tf.contrib.layers.xavier_initializer(), activation=None,
                          name='Conv3'+var_name, data_format='channels_last',reuse=tf.AUTO_REUSE)
-
-
     X = tf.nn.relu(X)
-
-
+    print("conv_res_part_S layer 3 output : ", X.shape)
     print('conv3 out S', X)
-
 
     return X
 
@@ -200,8 +183,7 @@ def main_proccess(E_t1,E_t2,E_t3,E_t4,E_t5,E_t6,S_t1,S_t2,S_t3,S_t4,S_t5,S_t6,S_
     print('e_out_after_reshapeeeee',e_out)
     S_t_extra=tf.reshape(S_t_extra,shape=[-1,time_step,4])
     e_out=tf.concat([e_out,Ybar],axis=-1)
-    e_out = tf.concat([e_out, Ybar,S_t_extra], axis=-1)
-
+    # e_out = tf.concat([e_out, Ybar,S_t_extra], axis=-1)
 
 
 
@@ -218,6 +200,7 @@ def main_proccess(E_t1,E_t2,E_t3,E_t4,E_t5,E_t6,S_t1,S_t2,S_t3,S_t4,S_t5,S_t6,S_
 
         cells.append(cell)
 
+    # It stack multiple type RNN models. like LSTM, GRU etc.
     cell = tf.contrib.rnn.MultiRNNCell(cells)
 
 
@@ -294,12 +277,13 @@ def get_sample(dic,L,avg,batch_size,time_steps,num_features):
 
 def get_sample_te(dic,mean_last,avg,batch_size_te,time_steps,num_features):
 
-    out = np.zeros(shape=[batch_size_te, time_steps, num_features])
+    out = np.zeros(shape=[batch_size_te, time_steps, num_features]) # num_features should be 398
 
     X = dic[str(2018)]
 
   #  r1 = np.random.randint(X.shape[0], size=batch_size_te)
-    out[:, 0:4, :] += mean_last.reshape(1,4,3+6*52+1+100+16+4)
+    # out[:, 0:4, :] += mean_last.reshape(1,4,3+6*52+1+100+16+4)
+    out[:, 0:4, :] += mean_last.reshape(1,4,6*52+66+16+4)  # 398
     #n=X[r1, :]
     #print(n.shape)
     ym=np.zeros(shape=[batch_size_te,1])+avg['2018']
@@ -315,63 +299,48 @@ def get_sample_te(dic,mean_last,avg,batch_size_te,time_steps,num_features):
 
 
 def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size_tr,le,l):
-
-
-
-
-
     with tf.device('/cpu:0'):
-
-
-
-
         E_t1 = tf.placeholder(shape=[None, 52,1], dtype=tf.float32, name='E_t1')
-
         E_t2 = tf.placeholder(shape=[None, 52, 1], dtype=tf.float32, name='E_t2')
-
         E_t3 = tf.placeholder(shape=[None, 52, 1], dtype=tf.float32, name='E_t3')
         E_t4 = tf.placeholder(shape=[None, 52, 1], dtype=tf.float32, name='E_t4')
         E_t5 = tf.placeholder(shape=[None, 52, 1], dtype=tf.float32, name='E_t5')
         E_t6 = tf.placeholder(shape=[None, 52, 1], dtype=tf.float32, name='E_t6')
 
+        # S_t1 = tf.placeholder(shape=[None, 10,1], dtype=tf.float32, name='S_t1')
+        # S_t2 = tf.placeholder(shape=[None, 10,1], dtype=tf.float32, name='S_t2')
+        # S_t3 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t3')
+        # S_t4 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t4')
+        # S_t5 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t5')
+        # S_t6 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t6')
+        # S_t7 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t7')
+        # S_t8 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t8')
+        # S_t9 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t9')
+        # S_t10 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t10')
+        # S_t_extra=tf.placeholder(shape=[None, 4,1], dtype=tf.float32, name='S_t_extra')
 
-
-        S_t1 = tf.placeholder(shape=[None, 10,1], dtype=tf.float32, name='S_t1')
-
-        S_t2 = tf.placeholder(shape=[None, 10,1], dtype=tf.float32, name='S_t2')
-
-        S_t3 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t3')
-
-        S_t4 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t4')
-
-        S_t5 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t5')
-
-        S_t6 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t6')
-
-        S_t7 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t7')
-
-        S_t8 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t8')
-
-        S_t9 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t9')
-
-        S_t10 = tf.placeholder(shape=[None, 10, 1], dtype=tf.float32, name='S_t10')
-
-        S_t_extra=tf.placeholder(shape=[None, 4,1], dtype=tf.float32, name='S_t_extra')
+        S_t1 = tf.placeholder(shape=[None, 6,1], dtype=tf.float32, name='S_t1')
+        S_t2 = tf.placeholder(shape=[None, 6,1], dtype=tf.float32, name='S_t2')
+        S_t3 = tf.placeholder(shape=[None, 6, 1], dtype=tf.float32, name='S_t3')
+        S_t4 = tf.placeholder(shape=[None, 6, 1], dtype=tf.float32, name='S_t4')
+        S_t5 = tf.placeholder(shape=[None, 6, 1], dtype=tf.float32, name='S_t5')
+        S_t6 = tf.placeholder(shape=[None, 6, 1], dtype=tf.float32, name='S_t6')
+        S_t7 = tf.placeholder(shape=[None, 6, 1], dtype=tf.float32, name='S_t7')
+        S_t8 = tf.placeholder(shape=[None, 6, 1], dtype=tf.float32, name='S_t8')
+        S_t9 = tf.placeholder(shape=[None, 6, 1], dtype=tf.float32, name='S_t9')
+        S_t10 = tf.placeholder(shape=[None, 6, 1], dtype=tf.float32, name='S_t10')
+        S_t_extra=tf.placeholder(shape=[None, 6,1], dtype=tf.float32, name='S_t_extra')
 
         P_t = tf.placeholder(shape=[None, 16, 1], dtype=tf.float32, name='P_t')  #Plant Data
 
-
-
-
         Ybar=tf.placeholder(shape=[None,5,1], dtype=tf.float32, name='Ybar')
-
 
         Y_t = tf.placeholder(shape=[None, 1], dtype=tf.float32,name='Y_t')
 
         Y_t_2 = tf.placeholder(shape=[None, 4], dtype=tf.float32, name='Y_t_2')
 
 
-        is_training=tf.placeholder(dtype=tf.bool)
+        is_training=tf.placeholder(dtype=tf.bool, name="is_training")
         lr=tf.placeholder(shape=[],dtype=tf.float32,name='learning_rate')
         dropout = tf.placeholder(tf.float32,name='dropout')
 
@@ -489,13 +458,15 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
 
         for i in range(Max_it):
 
-            out_tr = get_sample(dic, A, avg,batch_size_tr, time_steps=5, num_features=316+100+16+4)
+            # out_tr = get_sample(dic, A, avg,batch_size_tr, time_steps=5, num_features=316+100+16+4)
+            out_tr = get_sample(dic, A, avg,batch_size_tr, time_steps=5, num_features=312+66+16+3+1)
 
 
 
             Ybar_tr=out_tr[:, :, -1].reshape(-1,5,1)
 
-            Batch_X_e = out_tr[:, :, 3:-1].reshape(-1,6*52+100+16+4)
+            # Batch_X_e = out_tr[:, :, 3:-1].reshape(-1,6*52+100+16+4)
+            Batch_X_e = out_tr[:, :, 3:-1].reshape(-1,6*52+66+16) # 394
 
 
             Batch_X_e=np.expand_dims(Batch_X_e,axis=-1)
@@ -517,23 +488,37 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
 
 
 
+            # sess.run(train_op, feed_dict={ E_t1: Batch_X_e[:,0:52,:],E_t2: Batch_X_e[:,52*1:2*52,:],E_t3: Batch_X_e[:,52*2:3*52,:],
+            #                                E_t4: Batch_X_e[:, 52 * 3:4 * 52, :],E_t5: Batch_X_e[:,52*4:5*52,:],E_t6: Batch_X_e[:,52*5:52*6,:],
+            #                                S_t1:Batch_X_e[:,312:322,:],S_t2:Batch_X_e[:,322:332,:],S_t3:Batch_X_e[:,332:342,:],
+            #                                S_t4:Batch_X_e[:,342:352,:],S_t5:Batch_X_e[:,352:362,:],S_t6:Batch_X_e[:,362:372,:],
+            #                                S_t7: Batch_X_e[:, 372:382, :], S_t8: Batch_X_e[:, 382:392, :],
+            #                                S_t9: Batch_X_e[:, 392:402, :], S_t10: Batch_X_e[:, 402:412, :],P_t: Batch_X_e[:, 412:428, :],S_t_extra:Batch_X_e[:, 428:, :],
+            #                                Ybar:Ybar_tr,Y_t: Batch_Y,Y_t_2: Batch_Y_2,is_training:True,lr:learning_rate,dropout:0.0})
+
             sess.run(train_op, feed_dict={ E_t1: Batch_X_e[:,0:52,:],E_t2: Batch_X_e[:,52*1:2*52,:],E_t3: Batch_X_e[:,52*2:3*52,:],
                                            E_t4: Batch_X_e[:, 52 * 3:4 * 52, :],E_t5: Batch_X_e[:,52*4:5*52,:],E_t6: Batch_X_e[:,52*5:52*6,:],
-                                           S_t1:Batch_X_e[:,312:322,:],S_t2:Batch_X_e[:,322:332,:],S_t3:Batch_X_e[:,332:342,:],
-                                           S_t4:Batch_X_e[:,342:352,:],S_t5:Batch_X_e[:,352:362,:],S_t6:Batch_X_e[:,362:372,:],
-                                           S_t7: Batch_X_e[:, 372:382, :], S_t8: Batch_X_e[:, 382:392, :],
-                                           S_t9: Batch_X_e[:, 392:402, :], S_t10: Batch_X_e[:, 402:412, :],P_t: Batch_X_e[:, 412:428, :],S_t_extra:Batch_X_e[:, 428:, :],
-                                           Ybar:Ybar_tr,Y_t: Batch_Y,Y_t_2: Batch_Y_2,is_training:True,lr:learning_rate,dropout:0.0})
+                                           S_t1:Batch_X_e[:, 312:312 + 6*1, :],S_t2:Batch_X_e[:, 312 + 6*1:312 + 6*2 ,:],S_t3:Batch_X_e[:,312 + 6*2:312 + 6*3,:],
+                                           S_t4:Batch_X_e[:,312 + 6*3:312 + 6*4,:],S_t5:Batch_X_e[:,312 + 6*4:312 + 6*5,:],S_t6:Batch_X_e[:,312 + 6*5:312 + 6*6,:],
+                                           S_t7: Batch_X_e[:, 312 + 6*6:312 + 6*7, :], S_t8: Batch_X_e[:, 312 + 6*7:312 + 6*8, :],
+                                           S_t9: Batch_X_e[:, 312 + 6*8:312 + 6*9, :], S_t10: Batch_X_e[:, 312 + 6*9:312 + 6*10, :],P_t: Batch_X_e[:, 378:378 + 16, :],
+                                           S_t_extra:Batch_X_e[:, 312 + 6*10:312 + 6*11, :],
+                                           Ybar:Ybar_tr, 
+                                           Y_t: Batch_Y,
+                                           Y_t_2: Batch_Y_2,
+                                           is_training:True, 
+                                           lr:learning_rate,dropout:0.0})
 
-            if i%1000==0:
 
-                out_tr = get_sample(dic, A, avg, batch_size=1000, time_steps=5, num_features=316 + 100 + 16 + 4)
+            if (i+1)%1000==0:
 
-
+                # out_tr = get_sample(dic, A, avg, batch_size=1000, time_steps=5, num_features=316 + 100 + 16 + 4)
+                out_tr = get_sample(dic, A, avg, batch_size=1000, time_steps=5, num_features=312+66+16+3+1)
 
                 Ybar_tr = out_tr[:, :, -1].reshape(-1, 5, 1)
 
-                Batch_X_e = out_tr[:, :, 3:-1].reshape(-1, 6 * 52 + 100 + 16 + 4)
+                # Batch_X_e = out_tr[:, :, 3:-1].reshape(-1, 6 * 52 + 100 + 16 + 4)
+                Batch_X_e = out_tr[:, :, 3:-1].reshape(-1, 6 * 52 + 66 + 16)  # 394
 
 
                 Batch_X_e = np.expand_dims(Batch_X_e, axis=-1)
@@ -542,34 +527,68 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
 
                 Batch_Y_2 = out_tr[:, np.arange(0, 4), 2]
 
-                out_te = get_sample_te(dic, mean_last, avg,np.sum(Index), time_steps=5, num_features=316+100+16+4)
+                # out_te = get_sample_te(dic, mean_last, avg,np.sum(Index), time_steps=5, num_features=316+100+16+4)
+                out_te = get_sample_te(dic, mean_last, avg,np.sum(Index), time_steps=5, num_features=312+66+16+4) # num_features should be 398
                 print(out_te.shape)
                 Ybar_te = out_te[:, :, -1].reshape(-1, 5, 1)
-                Batch_X_e_te = out_te[:, :, 3:-1].reshape(-1,6*52+100+16+4)
+                # Batch_X_e_te = out_te[:, :, 3:-1].reshape(-1,6*52+100+16+4)
+                Batch_X_e_te = out_te[:, :, 3:-1].reshape(-1,6*52+66+16)
                 Batch_X_e_te = np.expand_dims(Batch_X_e_te, axis=-1)
                 Batch_Y_te = out_te[:, -1, 2]
                 Batch_Y_te = Batch_Y_te.reshape(len(Batch_Y_te), 1)
                 Batch_Y_te2 = out_te[:, np.arange(0,4), 2]
 
 
+                # rmse_tr,yhat1_tr,loss_tr = sess.run([RMSE,Yhat1,Tloss], feed_dict={ E_t1: Batch_X_e[:,0:52,:],E_t2: Batch_X_e[:,52*1:2*52,:],E_t3: Batch_X_e[:,52*2:3*52,:],
+                #                            E_t4: Batch_X_e[:, 52 * 3:4 * 52, :],E_t5: Batch_X_e[:,52*4:5*52,:],E_t6: Batch_X_e[:,52*5:52*6,:],
+                #                            S_t1:Batch_X_e[:,312:322,:],S_t2:Batch_X_e[:,322:332,:],S_t3:Batch_X_e[:,332:342,:],
+                #                            S_t4:Batch_X_e[:,342:352,:],S_t5:Batch_X_e[:,352:362,:],S_t6:Batch_X_e[:,362:372,:],
+                #                            S_t7: Batch_X_e[:, 372:382, :], S_t8: Batch_X_e[:, 382:392, :],
+                #                            S_t9: Batch_X_e[:, 392:402, :], S_t10: Batch_X_e[:, 402:412, :],P_t: Batch_X_e[:, 412:428, :],S_t_extra:Batch_X_e[:, 428:, :],
+                #                            Ybar:Ybar_tr,Y_t: Batch_Y,Y_t_2: Batch_Y_2,is_training:True,lr:learning_rate,dropout:0.0})
+                
                 rmse_tr,yhat1_tr,loss_tr = sess.run([RMSE,Yhat1,Tloss], feed_dict={ E_t1: Batch_X_e[:,0:52,:],E_t2: Batch_X_e[:,52*1:2*52,:],E_t3: Batch_X_e[:,52*2:3*52,:],
                                            E_t4: Batch_X_e[:, 52 * 3:4 * 52, :],E_t5: Batch_X_e[:,52*4:5*52,:],E_t6: Batch_X_e[:,52*5:52*6,:],
-                                           S_t1:Batch_X_e[:,312:322,:],S_t2:Batch_X_e[:,322:332,:],S_t3:Batch_X_e[:,332:342,:],
-                                           S_t4:Batch_X_e[:,342:352,:],S_t5:Batch_X_e[:,352:362,:],S_t6:Batch_X_e[:,362:372,:],
-                                           S_t7: Batch_X_e[:, 372:382, :], S_t8: Batch_X_e[:, 382:392, :],
-                                           S_t9: Batch_X_e[:, 392:402, :], S_t10: Batch_X_e[:, 402:412, :],P_t: Batch_X_e[:, 412:428, :],S_t_extra:Batch_X_e[:, 428:, :],
+                                           S_t1:Batch_X_e[:, 312:312+6*1, :],S_t2:Batch_X_e[:, 312+6*1:312+6*2, :],
+                                           S_t3:Batch_X_e[:, 312+6*2:312+6*3, :],
+                                           S_t4:Batch_X_e[:, 312+6*3:312+6*4,:],
+                                           S_t5:Batch_X_e[:, 312+6*4:312+6*5, :],
+                                           S_t6:Batch_X_e[:, 312+6*5:312+6*6,:],
+                                           S_t7: Batch_X_e[:, 312+6*6:312+6*7, :],
+                                           S_t8: Batch_X_e[:, 312+6*7:312+6*8, :],
+                                           S_t9: Batch_X_e[:, 312+6*8:312+6*9, :], 
+                                           S_t10: Batch_X_e[:, 312+6*9:312+6*10, :],
+                                           P_t: Batch_X_e[:, 378:378+16, :],
+                                           S_t_extra:Batch_X_e[:, 312+6*10:312+6*11, :],
                                            Ybar:Ybar_tr,Y_t: Batch_Y,Y_t_2: Batch_Y_2,is_training:True,lr:learning_rate,dropout:0.0})
+
 
                 rc_tr = np.corrcoef(np.squeeze(Batch_Y), np.squeeze(yhat1_tr))[0, 1]
 
 
+                # rmse_te,yhat1_te,loss_val = sess.run([RMSE,Yhat1,Tloss], feed_dict={ E_t1: Batch_X_e_te[:,0:52,:],E_t2: Batch_X_e_te[:,52*1:2*52,:],E_t3: Batch_X_e_te[:,52*2:3*52,:],
+                #                            E_t4: Batch_X_e_te[:, 52 * 3:4 * 52, :],E_t5: Batch_X_e_te[:,52*4:5*52,:],E_t6: Batch_X_e_te[:,52*5:52*6,:],
+                #                            S_t1:Batch_X_e_te[:,312:322,:],S_t2:Batch_X_e_te[:,322:332,:],S_t3:Batch_X_e_te[:,332:342,:],
+                #                            S_t4:Batch_X_e_te[:,342:352,:],S_t5:Batch_X_e_te[:,352:362,:],S_t6:Batch_X_e_te[:,362:372,:],
+                #                            S_t7: Batch_X_e_te[:, 372:382, :], S_t8: Batch_X_e_te[:, 382:392, :],
+                #                            S_t9: Batch_X_e_te[:, 392:402, :], S_t10: Batch_X_e_te[:, 402:412, :],P_t: Batch_X_e_te[:, 412:428, :],S_t_extra:Batch_X_e_te[:, 428:, :],
+                #                            Ybar:Ybar_te,Y_t: Batch_Y_te,Y_t_2: Batch_Y_te2,is_training:True,lr:learning_rate,dropout:0.0})
                 rmse_te,yhat1_te,loss_val = sess.run([RMSE,Yhat1,Tloss], feed_dict={ E_t1: Batch_X_e_te[:,0:52,:],E_t2: Batch_X_e_te[:,52*1:2*52,:],E_t3: Batch_X_e_te[:,52*2:3*52,:],
                                            E_t4: Batch_X_e_te[:, 52 * 3:4 * 52, :],E_t5: Batch_X_e_te[:,52*4:5*52,:],E_t6: Batch_X_e_te[:,52*5:52*6,:],
-                                           S_t1:Batch_X_e_te[:,312:322,:],S_t2:Batch_X_e_te[:,322:332,:],S_t3:Batch_X_e_te[:,332:342,:],
-                                           S_t4:Batch_X_e_te[:,342:352,:],S_t5:Batch_X_e_te[:,352:362,:],S_t6:Batch_X_e_te[:,362:372,:],
-                                           S_t7: Batch_X_e_te[:, 372:382, :], S_t8: Batch_X_e_te[:, 382:392, :],
-                                           S_t9: Batch_X_e_te[:, 392:402, :], S_t10: Batch_X_e_te[:, 402:412, :],P_t: Batch_X_e_te[:, 412:428, :],S_t_extra:Batch_X_e_te[:, 428:, :],
+                                           S_t1:Batch_X_e_te[:, 312:312+6*1, :],
+                                           S_t2:Batch_X_e_te[:, 312+6*1:312+6*2, :],
+                                           S_t3:Batch_X_e_te[:, 312+6*2:312+6*3, :],
+                                           S_t4:Batch_X_e_te[:, 312+6*3:312+6*4, :],
+                                           S_t5:Batch_X_e_te[:, 312+6*4:312+6*5, :],
+                                           S_t6:Batch_X_e_te[:, 312+6*5:312+6*6, :],
+                                           S_t7: Batch_X_e_te[:, 312+6*6:312+6*7, :],
+                                           S_t8: Batch_X_e_te[:, 312+6*7:312+6*8, :],
+                                           S_t9: Batch_X_e_te[:, 312+6*8:312+6*9, :], 
+                                           S_t10: Batch_X_e_te[:, 312+6*9:312+6*10, :],
+                                           P_t: Batch_X_e_te[:, 378:378+16, :],
+                                           S_t_extra:Batch_X_e_te[:, 312+6*10:312+6*11, :],
                                            Ybar:Ybar_te,Y_t: Batch_Y_te,Y_t_2: Batch_Y_te2,is_training:True,lr:learning_rate,dropout:0.0})
+
 
                 rc=np.corrcoef(np.squeeze(Batch_Y_te),np.squeeze(yhat1_te))[0,1]
                 loss_validation.append(loss_val)
@@ -611,7 +630,7 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
 
 
 
-BigX = np.load('./DATA_corn') ##order W(52*6) S(100) P(16) S_extra(4)
+BigX = np.load('./corn_samples_npz.npz') ##order W(52*6) S(100) P(16) S_extra(4)
 
 X=BigX['data']
 
