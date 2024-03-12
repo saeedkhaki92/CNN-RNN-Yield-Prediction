@@ -283,7 +283,7 @@ def get_sample_te(dic,mean_last,avg,batch_size_te,time_steps,num_features):
 
   #  r1 = np.random.randint(X.shape[0], size=batch_size_te)
     # out[:, 0:4, :] += mean_last.reshape(1,4,3+6*52+1+100+16+4)
-    out[:, 0:4, :] += mean_last.reshape(1,4,6*52+66+16+4)  # 398
+    out[:, 0:4, :] += mean_last.reshape(1,4,6*52+66+14+4)  # 398
     #n=X[r1, :]
     #print(n.shape)
     ym=np.zeros(shape=[batch_size_te,1])+avg['2018']
@@ -331,7 +331,7 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
         S_t10 = tf.placeholder(shape=[None, 6, 1], dtype=tf.float32, name='S_t10')
         S_t_extra=tf.placeholder(shape=[None, 6,1], dtype=tf.float32, name='S_t_extra')
 
-        P_t = tf.placeholder(shape=[None, 16, 1], dtype=tf.float32, name='P_t')  #Plant Data
+        P_t = tf.placeholder(shape=[None, 14, 1], dtype=tf.float32, name='P_t')  #Plant Data
 
         Ybar=tf.placeholder(shape=[None,5,1], dtype=tf.float32, name='Ybar')
 
@@ -459,14 +459,14 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
         for i in range(Max_it):
 
             # out_tr = get_sample(dic, A, avg,batch_size_tr, time_steps=5, num_features=316+100+16+4)
-            out_tr = get_sample(dic, A, avg,batch_size_tr, time_steps=5, num_features=312+66+16+3+1)
+            out_tr = get_sample(dic, A, avg,batch_size_tr, time_steps=5, num_features=312+66+14+3+1)
 
 
 
             Ybar_tr=out_tr[:, :, -1].reshape(-1,5,1)
 
             # Batch_X_e = out_tr[:, :, 3:-1].reshape(-1,6*52+100+16+4)
-            Batch_X_e = out_tr[:, :, 3:-1].reshape(-1,6*52+66+16) # 394
+            Batch_X_e = out_tr[:, :, 3:-1].reshape(-1,6*52+66+14) # 392
 
 
             Batch_X_e=np.expand_dims(Batch_X_e,axis=-1)
@@ -501,7 +501,7 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
                                            S_t1:Batch_X_e[:, 312:312 + 6*1, :],S_t2:Batch_X_e[:, 312 + 6*1:312 + 6*2 ,:],S_t3:Batch_X_e[:,312 + 6*2:312 + 6*3,:],
                                            S_t4:Batch_X_e[:,312 + 6*3:312 + 6*4,:],S_t5:Batch_X_e[:,312 + 6*4:312 + 6*5,:],S_t6:Batch_X_e[:,312 + 6*5:312 + 6*6,:],
                                            S_t7: Batch_X_e[:, 312 + 6*6:312 + 6*7, :], S_t8: Batch_X_e[:, 312 + 6*7:312 + 6*8, :],
-                                           S_t9: Batch_X_e[:, 312 + 6*8:312 + 6*9, :], S_t10: Batch_X_e[:, 312 + 6*9:312 + 6*10, :],P_t: Batch_X_e[:, 378:378 + 16, :],
+                                           S_t9: Batch_X_e[:, 312 + 6*8:312 + 6*9, :], S_t10: Batch_X_e[:, 312 + 6*9:312 + 6*10, :],P_t: Batch_X_e[:, 378:378 + 14, :],
                                            S_t_extra:Batch_X_e[:, 312 + 6*10:312 + 6*11, :],
                                            Ybar:Ybar_tr, 
                                            Y_t: Batch_Y,
@@ -513,12 +513,12 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
             if i%1000==0:
 
                 # out_tr = get_sample(dic, A, avg, batch_size=1000, time_steps=5, num_features=316 + 100 + 16 + 4)
-                out_tr = get_sample(dic, A, avg, batch_size=1000, time_steps=5, num_features=312+66+16+3+1)
+                out_tr = get_sample(dic, A, avg, batch_size=1000, time_steps=5, num_features=312+66+14+3+1)
 
                 Ybar_tr = out_tr[:, :, -1].reshape(-1, 5, 1)
 
                 # Batch_X_e = out_tr[:, :, 3:-1].reshape(-1, 6 * 52 + 100 + 16 + 4)
-                Batch_X_e = out_tr[:, :, 3:-1].reshape(-1, 6 * 52 + 66 + 16)  # 394
+                Batch_X_e = out_tr[:, :, 3:-1].reshape(-1, 6 * 52 + 66 + 14)  # 394
 
 
                 Batch_X_e = np.expand_dims(Batch_X_e, axis=-1)
@@ -528,11 +528,11 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
                 Batch_Y_2 = out_tr[:, np.arange(0, 4), 2]
 
                 # out_te = get_sample_te(dic, mean_last, avg,np.sum(Index), time_steps=5, num_features=316+100+16+4)
-                out_te = get_sample_te(dic, mean_last, avg,np.sum(Index), time_steps=5, num_features=312+66+16+4) # num_features should be 398
+                out_te = get_sample_te(dic, mean_last, avg,np.sum(Index), time_steps=5, num_features=312+66+14+4) # num_features should be 398
                 print(out_te.shape)
                 Ybar_te = out_te[:, :, -1].reshape(-1, 5, 1)
                 # Batch_X_e_te = out_te[:, :, 3:-1].reshape(-1,6*52+100+16+4)
-                Batch_X_e_te = out_te[:, :, 3:-1].reshape(-1,6*52+66+16)
+                Batch_X_e_te = out_te[:, :, 3:-1].reshape(-1,6*52+66+14)
                 Batch_X_e_te = np.expand_dims(Batch_X_e_te, axis=-1)
                 Batch_Y_te = out_te[:, -1, 2]
                 Batch_Y_te = Batch_Y_te.reshape(len(Batch_Y_te), 1)
@@ -558,7 +558,7 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
                                            S_t8: Batch_X_e[:, 312+6*7:312+6*8, :],
                                            S_t9: Batch_X_e[:, 312+6*8:312+6*9, :], 
                                            S_t10: Batch_X_e[:, 312+6*9:312+6*10, :],
-                                           P_t: Batch_X_e[:, 378:378+16, :],
+                                           P_t: Batch_X_e[:, 378:378+14, :],
                                            S_t_extra:Batch_X_e[:, 312+6*10:312+6*11, :],
                                            Ybar:Ybar_tr,Y_t: Batch_Y,Y_t_2: Batch_Y_2,is_training:True,lr:learning_rate,dropout:0.0})
 
@@ -630,7 +630,7 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
 
 
 
-BigX = np.load('./corn_samples_npz.npz') ##order W(52*6) S(100) P(16) S_extra(4)
+BigX = np.load('./soyabean_fianl_npz.npz') ##order W(52*6) S(100) P(16) S_extra(4)
 
 X=BigX['data']
 
@@ -670,9 +670,9 @@ print('Std %.2f and mean %.2f  of test ' %(np.std(X[Index][:,2]),np.mean(X[Index
 
 
 
-Max_it=350000      #150000 could also be used
+Max_it=350000      # 150000 could also be used
 learning_rate=0.0003   # Learning rate
-batch_size_tr=16  # traning batch size
+batch_size_tr=25  # traning batch size
 le=0.0  # Weight of loss for prediction using times before final time steps
 l=1.0    # Weight of loss for prediction using final time step
 num_units=64  # Number of hidden units for LSTM celss
