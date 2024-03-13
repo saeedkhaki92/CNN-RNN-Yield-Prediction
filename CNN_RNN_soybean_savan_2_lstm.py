@@ -2,6 +2,10 @@ import numpy as np
 import time
 import tensorflow as tf
 
+# include for logging
+import pandas as pd
+log_df = pd.DataFrame(columns={'Iteration', 'training_RMSE', 'Cor_train','test_RMSE', 'Cor_is'})
+
 
 def conv_res_part_P(P_t,f,is_training,var_name):
     print("----- Flatten layer on p ----", P_t.shape)
@@ -597,6 +601,8 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
 
                 print(loss_tr,loss_val)
                 print("Iteration %d , The training RMSE is %f and Cor train is %f  and test RMSE is %f and Cor is %f " % (i, rmse_tr,rc_tr, rmse_te,rc))
+                # Append the data to logs
+                log_df.append({"Iteration":i, "training_RMSE":rmse_tr, "Cor_train": rc_tr, "test_RMSE":rmse_te, "Cor_is":rc }, ignore_index=True)
 
 
 
@@ -680,6 +686,8 @@ num_layers=2  # Number of layers of LSTM cell
 
 
 rmse_tr,rmse_te,train_loss,validation_loss=main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size_tr,le,l)
+# store the csv file
+log_df.to_csv('logs/lstm_layer_2_unit_64.csv')
 
 
 
