@@ -303,6 +303,7 @@ def get_sample_te(dic,mean_last,avg,batch_size_te,time_steps,num_features):
 
 
 def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size_tr,le,l):
+    global log_df
     with tf.device('/cpu:0'):
         E_t1 = tf.placeholder(shape=[None, 52,1], dtype=tf.float32, name='E_t1')
         E_t2 = tf.placeholder(shape=[None, 52, 1], dtype=tf.float32, name='E_t2')
@@ -602,7 +603,7 @@ def main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size
                 print(loss_tr,loss_val)
                 print("Iteration %d , The training RMSE is %f and Cor train is %f  and test RMSE is %f and Cor is %f " % (i, rmse_tr,rc_tr, rmse_te,rc))
                 # Append the data to logs
-                log_df.append({"Iteration":i, "training_RMSE":rmse_tr, "Cor_train": rc_tr, "test_RMSE":rmse_te, "Cor_is":rc }, ignore_index=True)
+                log_df = log_df.append({"Iteration":i, "training_RMSE":rmse_tr, "Cor_train": rc_tr, "test_RMSE":rmse_te, "Cor_is":rc }, ignore_index=True)
 
 
 
@@ -684,10 +685,11 @@ l=1.0    # Weight of loss for prediction using final time s tep
 num_units=64  # Number of hidden units for LSTM celss
 num_layers=2  # Number of layers of LSTM cell
 
-
-rmse_tr,rmse_te,train_loss,validation_loss=main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size_tr,le,l)
+try:
+    rmse_tr,rmse_te,train_loss,validation_loss=main_program(X, Index,num_units,num_layers,Max_it, learning_rate, batch_size_tr,le,l)
+except Exception as e:
 # store the csv file
-log_df.to_csv('logs/lstm_layer_2_unit_64.csv')
+    log_df.to_csv('logs/lstm_layer_2_unit_64.csv')
 
 
 
