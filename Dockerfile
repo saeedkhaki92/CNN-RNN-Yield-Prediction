@@ -5,6 +5,8 @@ FROM python:3.7.0
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
+# Copy all the files from here into the container
+COPY . /app/
 
 # Install TensorFlow 1.15.5
 RUN pip install --upgrade pip
