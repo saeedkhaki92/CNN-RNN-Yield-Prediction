@@ -12,6 +12,7 @@ COPY . /app/
 RUN pip install --upgrade pip
 RUN pip install tensorflow==1.14.0
 RUN  pip install pandas
+RUN pip install protobuf==3.20.*
 
 
 # CMD specifies the default command to run when the container starts

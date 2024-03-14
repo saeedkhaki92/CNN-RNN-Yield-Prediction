@@ -4,3 +4,6 @@ Build The docker image
 
 Run The docker image
 docker run -it mypythonimage
+
+ProtoBuff Error
+pip install protobuf==3.20.*
